@@ -9,6 +9,4 @@ dotenv.config({
   override: true,
 });
 
-process.env.DATABASE_URL = `file:${path.join(root, "prisma", "dev.db")}`;
-
 await import("./dialog.js");

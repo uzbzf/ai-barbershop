@@ -28,6 +28,7 @@ function nextDate(isOffByWeekday, startOffset = 0) {
 
 async function main() {
   await prisma.booking.deleteMany();
+  await prisma.telegramClient.deleteMany();
   await prisma.workingHour.deleteMany();
   await prisma.barber.deleteMany();
   await prisma.service.deleteMany();
