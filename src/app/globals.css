@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas: #f4f7fb;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --panel: #ffffff;
+  --line: #e2e8f0;
+  --brand: #155eef;
+  --brand-dark: #0b3fa8;
+  --brand-soft: #dbeafe;
+  --hero: #0b3fa8;
+  --hero-mid: #155eef;
+  --accent: #38bdf8;
+  --today: #155eef;
+  --danger: #e11d48;
+  --ok: #16a34a;
+  --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+}
+
+html.dark {
+  --canvas: #07101f;
+  --ink: #e8eef9;
+  --muted: #94a3b8;
+  --panel: #0e1a30;
+  --line: #1e334f;
+  --brand: #3b82f6;
+  --brand-dark: #60a5fa;
+  --brand-soft: #132445;
+  --hero: #071833;
+  --hero-mid: #0b3fa8;
+  --accent: #7dd3fc;
+  --today: #60a5fa;
+  --danger: #fb7185;
+  --ok: #4ade80;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-unbounded), sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-fira), ui-monospace, monospace;
+}
+
+::selection {
+  background: var(--brand);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--brand-dark);
+}
+
+.btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-outline {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink);
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.input {
+  @apply w-full rounded-xl px-3 py-2.5;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink);
+}
+
+.eyebrow {
+  @apply font-mono text-xs tracking-[0.22em] uppercase;
+  color: var(--brand);
+}
+
+.section-pad {
+  @apply mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:py-20;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
