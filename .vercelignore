@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+.neon
+scripts/push-vercel-env.cjs
+scripts/set-neon-env.cjs
+node_modules
+.next
+prisma/dev.db
+prisma/dev.db-journal
